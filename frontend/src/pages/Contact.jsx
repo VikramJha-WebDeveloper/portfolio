@@ -37,39 +37,39 @@ const Contact = () => {
                 <div className="row">
                   <div className="col col-12">
                     <form>
-                      <div class="mb-3">
-                        <label for="fullName" class="form-label">
+                      <div className="mb-3">
+                        <label htmlFor="fullName" className="form-label">
                           Full Name
                         </label>
                         <input
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           id="fullName"
                           aria-describedby="emailHelp"
                         />
                       </div>
-                      <div class="mb-3">
-                        <label for="email" class="form-label">
+                      <div className="mb-3">
+                        <label htmlFor="email" className="form-label">
                           Email
                         </label>
                         <input
                           type="email"
-                          class="form-control"
+                          className="form-control"
                           id="email"
                           aria-describedby="emailHelp"
                         />
                       </div>
-                      <div class="mb-3">
-                        <label for="message" className="form-label">Message</label>
+                      <div className="mb-3">
+                        <label htmlFor="message" className="form-label">Message</label>
                         <textarea
-                          class="form-control"
+                          className="form-control"
                           placeholder="Your Message"
                           id="message"
                           rows="4"
                         ></textarea>
                         
                       </div>
-                      <button type="submit" class="btn text-light" style={{backgroundColor: `${theme.colors.primary}`}}>
+                      <button type="submit" className="btn text-light" style={{backgroundColor: `${theme.colors.primary}`}}>
                         Submit
                       </button>
                     </form>
@@ -86,9 +86,9 @@ const Contact = () => {
         width="600"
         height="450"
         style={{ border: "0" }}
-        allowfullscreen=""
+        allowFullScreen=""
         loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
+        referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
     </>
   );

@@ -1,58 +1,28 @@
 import React from "react";
 import styled from "styled-components";
-import Slider from "react-slick";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from 'swiper/modules';
+
+import 'swiper/css';
 
 // import section title
 import SectionTitle from "../components/SectionTitle";
 
-// import images 
-import htmlLogo from "../../public/skills images/html.png"
-import cssLogo from "../../public/skills images/css.png"
-import javascriptLogo from "../../public/skills images/javascript.png"
-import bootstrapLogo from "../../public/skills images/bootstrap-framework.png"
-import reactLogo from "../../public/skills images/react.png"
-import nodeLogo from "../../public/skills images/nodejs.png"
-import expressLogo from "../../public/skills images/express.png"
-import mongodbLogo from "../../public/skills images/mongo-db.png"
+// import images
+import htmlLogo from "/skills images/html.png";
+import cssLogo from "/skills images/css.png";
+import javascriptLogo from "/skills images/javascript.png";
+import bootstrapLogo from "/skills images/bootstrap-framework.png";
+import reactLogo from "/skills images/react.png";
+import nodeLogo from "/skills images/nodejs.png";
+import expressLogo from "/skills images/express.png";
+import mongodbLogo from "/skills images/mongo-db.png";
 
-const SkillSection = styled.div``;
+const SkillSection = styled.div`
+
+`;
 
 const Skills = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToScroll: 1,
-    arrows: true,
-    autoplay: true,
-    slidesToShow: 4,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 400,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
   return (
     <>
       <SkillSection
@@ -69,62 +39,94 @@ const Skills = () => {
               className="col-12 mt-5 mt-lg-0 d-flex justify-content-center flex-column"
               data-aos="zoom-in"
             >
-                <div className="slider-container rounded" style={{ width: "80%", margin: "0 auto" }}>
-      <Slider {...settings}>
+              <Swiper style={{width: "100%"}}
+      modules={[Autoplay]}
+      spaceBetween={30}
+      slidesPerView={5}
+      loop={true}
+      autoplay={{
+        delay: 0, 
+        disableOnInteraction: false,
+      }}
+      speed={4000}         
+      allowTouchMove={true}
+      grabCursor={true}
+      cssMode={false}
+
+      breakpoints={{
+    1200: { slidesPerView: 5 },
+    992: { slidesPerView: 3 },
+    768: { slidesPerView: 2 },
+    0: { slidesPerView: 1 },
+  }}
+    >
+      <SwiperSlide>
         <div className="card d-flex align-items-center justify-content-center bg-transparent border-0 p-5">
-            <img src={htmlLogo} style={{width: "100%"}} />
-            <div className="card-body">
-                <h5 className="text-light">HTML</h5>
-            </div>
-        </div>
+                    <img src={htmlLogo} style={{ width: "100%" }} />
+                    <div className="card-body">
+                      <h5 className="text-light">HTML</h5>
+                    </div>
+                  </div>
+      </SwiperSlide>
+      <SwiperSlide>
         <div className="card d-flex align-items-center justify-content-center bg-transparent border-0 p-5">
-            <img src={cssLogo} style={{width: "100%"}} />
-            <div className="card-body">
-                <h5 className="text-light">CSS</h5>
-            </div>
-        </div>
+                    <img src={cssLogo} style={{ width: "100%" }} />
+                    <div className="card-body">
+                      <h5 className="text-light">CSS</h5>
+                    </div>
+                  </div>
+      </SwiperSlide>
+      <SwiperSlide>
         <div className="card d-flex align-items-center justify-content-center bg-transparent border-0 p-5">
-            <img src={javascriptLogo} style={{width: "100%"}} />
-            <div className="card-body">
-                <h5 className="text-light">javaScript</h5>
-            </div>
-        </div>
+                    <img src={javascriptLogo} style={{ width: "100%" }} />
+                    <div className="card-body">
+                      <h5 className="text-light">javaScript</h5>
+                    </div>
+                  </div>
+      </SwiperSlide>
+      <SwiperSlide>
         <div className="card d-flex align-items-center justify-content-center bg-transparent border-0 p-5">
-            <img src={bootstrapLogo} style={{width: "100%"}} />
-            <div className="card-body">
-                <h5 className="text-light">Bootstrap</h5>
-            </div>
-        </div>
+                    <img src={bootstrapLogo} style={{ width: "100%" }} />
+                    <div className="card-body">
+                      <h5 className="text-light">Bootstrap</h5>
+                    </div>
+                  </div>
+      </SwiperSlide>
+      <SwiperSlide>
         <div className="card d-flex align-items-center justify-content-center bg-transparent border-0 p-5">
-            <img src={reactLogo} style={{width: "100%"}} />
-            <div className="card-body">
-                <h5 className="text-light">React.js</h5>
-            </div>
-        </div>
+                    <img src={reactLogo} style={{ width: "100%" }} />
+                    <div className="card-body">
+                      <h5 className="text-light">React.js</h5>
+                    </div>
+                  </div>
+      </SwiperSlide>
+      <SwiperSlide>
+<div className="card d-flex align-items-center justify-content-center bg-transparent border-0 p-5">
+                    <img src={nodeLogo} style={{ width: "100%" }} />
+                    <div className="card-body">
+                      <h5 className="text-light">Node.js</h5>
+                    </div>
+                  </div>
+      </SwiperSlide>
+      <SwiperSlide>
+<div className="card d-flex align-items-center justify-content-center bg-transparent border-0 p-5">
+                    <img src={expressLogo} style={{ width: "100%" }} />
+                    <div className="card-body">
+                      <h5 className="text-light">Express.js</h5>
+                    </div>
+                  </div>
+      </SwiperSlide>
+      <SwiperSlide>
         <div className="card d-flex align-items-center justify-content-center bg-transparent border-0 p-5">
-            <img src={nodeLogo} style={{width: "100%"}} />
-            <div className="card-body">
-                <h5 className="text-light">Node.jd</h5>
-            </div>
-        </div>
-        <div className="card d-flex align-items-center justify-content-center bg-transparent border-0 p-5">
-            <img src={expressLogo} style={{width: "100%"}} />
-            <div className="card-body">
-                <h5 className="text-light">Express.js</h5>
-            </div>
-        </div>
-        <div className="card d-flex align-items-center justify-content-center bg-transparent border-0 p-5">
-            <img src={mongodbLogo} style={{width: "100%"}} />
-            <div className="card-body">
-                <h5 className="text-light">MongoDB</h5>
-            </div>
-        </div>
-      </Slider>
-    </div>
+                    <img src={mongodbLogo} style={{ width: "100%" }} />
+                    <div className="card-body">
+                      <h5 className="text-light">MongoDB</h5>
+                    </div>
+                  </div>
+      </SwiperSlide>
+    </Swiper>
             </div>
           </div>
-
-          
         </div>
       </SkillSection>
     </>
