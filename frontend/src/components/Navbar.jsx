@@ -10,6 +10,9 @@ import theme from "../styles/theme";
 // import images
 import logo from "/web-logo.png";
 
+// import resume pdf
+import resume from "/resume.pdf"
+
 const NavSection = styled.div`
    z-index: 1;
   .active{
@@ -73,7 +76,7 @@ const Navbar = () => {
                 </a>
               </li>
             </ul>
-            <a href="../../public/myResume.pdf"
+            <a href={resume}
               className="btn text-light fw-bolder"
               style={{ background: theme.colors.tertiary}}
               target="_blank"

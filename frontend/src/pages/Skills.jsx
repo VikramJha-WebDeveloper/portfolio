@@ -26,7 +26,6 @@ const Skills = () => {
   return (
     <>
       <SkillSection
-        id="contact"
         className={`py-5 d-flex align-items-center justify-content-center`}
       >
         <div className="container py-3">

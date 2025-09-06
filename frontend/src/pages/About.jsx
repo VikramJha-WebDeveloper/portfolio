@@ -9,7 +9,9 @@ import theme from "../styles/theme";
 
 // import images
 import vikramJhaImage from "/About images/myCropedPic.jpg"
-import resumePic from "/About images/resumePic.png"
+
+// import resume
+import resume from "/resume.pdf"
 
 const AboutSection = styled.div`
   overflow: hidden;
@@ -73,7 +75,7 @@ const About = () => {
               <li>⚛️ React.js & Bootstrap Lover</li>
               <li>🧠 Quick Learner & Problem Solver</li>
             </ul>
-<a href="../../public/myResume.pdf"
+<a href={resume}
               className="btn text-light fw-bolder"
               style={{ background: theme.colors.primary, width: "170px"}}
               target="_blank"
