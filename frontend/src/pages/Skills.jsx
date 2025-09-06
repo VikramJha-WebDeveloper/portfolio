@@ -17,9 +17,11 @@ import reactLogo from "/skills images/react.png";
 import nodeLogo from "/skills images/nodejs.png";
 import expressLogo from "/skills images/express.png";
 import mongodbLogo from "/skills images/mongo-db.png";
+import bgImage from "/skills images/bgImage.jpg"
 
 const SkillSection = styled.div`
-
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.9)), url(${bgImage});
+  background-attachment: fixed;
 `;
 
 const Skills = () => {

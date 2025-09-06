@@ -1,6 +1,6 @@
 import "./App.css";
 import AOS from "aos";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // import theme
 import theme from "./styles/theme";
@@ -34,10 +34,18 @@ const AppSection = styled.div`
 `;
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    setTimeout(()=>{
+      setIsLoading(false);
+      AOS.init({ duration: 1000 });
+    }, 2000); 
   }, []);
   return (
+    isLoading?<div className="vh-100 d-flex align-items-center justify-content-center" style={{color: theme.colors.primary}}><div class="spinner-border" style={{width: "3rem", height: "3rem", role: "status"}}>
+  <span class="visually-hidden">Loading...</span>
+</div>
+</div>:
     <AppSection style={{ background: theme.colors.linearGradient }}>
       <Navbar />
       <Home />
