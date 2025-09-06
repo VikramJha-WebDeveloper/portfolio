@@ -57,14 +57,14 @@ const Skills = () => {
     1200: { slidesPerView: 5 },
     992: { slidesPerView: 3 },
     768: { slidesPerView: 2 },
-    0: { slidesPerView: 1 },
+    0: { slidesPerView: 2 },
   }}
     >
       <SwiperSlide>
         <div className="card d-flex align-items-center justify-content-center bg-transparent border-0 p-5">
                     <img src={htmlLogo} style={{ width: "100%" }} />
                     <div className="card-body">
-                      <h5 className="text-light">HTML</h5>
+                      <h5 className="text-light">HTML5</h5>
                     </div>
                   </div>
       </SwiperSlide>
@@ -72,7 +72,7 @@ const Skills = () => {
         <div className="card d-flex align-items-center justify-content-center bg-transparent border-0 p-5">
                     <img src={cssLogo} style={{ width: "100%" }} />
                     <div className="card-body">
-                      <h5 className="text-light">CSS</h5>
+                      <h5 className="text-light">CSS3</h5>
                     </div>
                   </div>
       </SwiperSlide>
@@ -80,7 +80,7 @@ const Skills = () => {
         <div className="card d-flex align-items-center justify-content-center bg-transparent border-0 p-5">
                     <img src={javascriptLogo} style={{ width: "100%" }} />
                     <div className="card-body">
-                      <h5 className="text-light">javaScript</h5>
+                      <h5 className="text-light">JavaScript</h5>
                     </div>
                   </div>
       </SwiperSlide>
@@ -96,7 +96,7 @@ const Skills = () => {
         <div className="card d-flex align-items-center justify-content-center bg-transparent border-0 p-5">
                     <img src={reactLogo} style={{ width: "100%" }} />
                     <div className="card-body">
-                      <h5 className="text-light">React.js</h5>
+                      <h5 className="text-light">React.jS</h5>
                     </div>
                   </div>
       </SwiperSlide>
@@ -104,7 +104,7 @@ const Skills = () => {
 <div className="card d-flex align-items-center justify-content-center bg-transparent border-0 p-5">
                     <img src={nodeLogo} style={{ width: "100%" }} />
                     <div className="card-body">
-                      <h5 className="text-light">Node.js</h5>
+                      <h5 className="text-light">Node.jS</h5>
                     </div>
                   </div>
       </SwiperSlide>
@@ -112,7 +112,7 @@ const Skills = () => {
 <div className="card d-flex align-items-center justify-content-center bg-transparent border-0 p-5">
                     <img src={expressLogo} style={{ width: "100%" }} />
                     <div className="card-body">
-                      <h5 className="text-light">Express.js</h5>
+                      <h5 className="text-light">Express.jS</h5>
                     </div>
                   </div>
       </SwiperSlide>
